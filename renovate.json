@@ -11,5 +11,5 @@
     ":maintainLockFilesWeekly"
   ],
   "semanticCommitScope": "deps",
-  "pinDependencies": false
+  "rangeStrategy": "auto"
 }
