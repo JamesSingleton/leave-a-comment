@@ -1,0 +1,19 @@
+name: 'Test Action'
+on:
+  push:
+    branches:
+      - master
+      - 'releases/*'
+
+jobs:
+  # test action works running from the graph
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          issue_number: 3
+          issue_type: issue
+          comment: 'This is a test comment'
+          token: ${{ secrets.GITHUB_TOKEN }}

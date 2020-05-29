@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "config:base",
+    ":rebaseStalePrs",
+    ":automergeMinor",
+    ":label(ready)",
+    "group:linters",
+    ":assignee(JamesSingleton)",
+    ":separateMajorReleases",
+    ":enableVulnerabilityAlerts",
+    ":maintainLockFilesWeekly",
+    ":preserveSemverRanges"
+  ],
+  "semanticCommitScope": "deps"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "leave-a-comment",
+  "version": "1.0.0",
+  "description": "A GitHub Action to leave a comment on a PR or an Issue",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "ncc build src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesSingleton/leave-a-comment.git"
+  },
+  "keywords": [
+    "GitHub",
+    "GitHub Actions",
+    "comment",
+    "leave comment"
+  ],
+  "author": "James Singleton <jamesrsingleton1@gmail.com> (https://github.com/JamesSingleton)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesSingleton/leave-a-comment/issues"
+  },
+  "homepage": "https://github.com/JamesSingleton/leave-a-comment#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^2.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@zeit/ncc": "^0.22.3",
+    "husky": "^4.2.5"
+  }
+}

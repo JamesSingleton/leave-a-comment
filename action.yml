@@ -1,0 +1,21 @@
+name: 'Leave a comment'
+description: 'Leaves a new comment'
+
+inputs:
+  issue_number:
+    description: 'The issue number you want to leave a comment on.'
+    required: true
+  comment:
+    description: 'What you want to comment.'
+    required: true
+  token:
+    description: 'GitHub access token.'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'message-circle'
+  color: 'gray-dark'
