@@ -29,9 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Example Comment
-        uses: jamessingleton/leave-a-comment@v1
+        uses: jamessingleton/leave-a-comment@v1.0.0
         with:
           issue_number: ${{ github.event.issue.number }}
+          issue_type: 'issue'
           comment: 'Your Comment Here'
           token: ${{ secrets.BOT_TOKEN }}
 ```
